@@ -1,13 +1,31 @@
 body {
-  background: red;
-  div {
-    height: 30px;
-    background: yellow;
-    width: 200px;
-    transform: translateX(20px)
+  background: #eee;  
+}
+
+:global {
+  .title {
+    background: #3f51b5;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
   }
 }
 
-.a {
-  color: red;
+.wrap {
+  min-width: 1200px;
+  width: 80%;
+  height: 800px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  .col {
+    flex-grow: 1;
+    &:nth-child(even) {
+      flex-grow: 2;
+      border-right: 1px solid #eee;
+      border-left: 1px solid #eee;
+    }
+  }
 }

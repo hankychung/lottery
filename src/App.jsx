@@ -1,17 +1,26 @@
 import React from 'react'
 import {hot} from 'react-hot-loader/root'
-import style from './main.less'
-import Cmp1 from './pages/cmp1'
+import layout from './main.less'
+import Paper from '@material-ui/core/Paper'
+import Center from './cmp/center/Center'
+
 
 class App extends React.Component {
+  bingo() {
+    alert('bingo')
+  }
   render() {
     return (
-      <div>
-        <div className={style.a}>HOME</div>
-        <Cmp1 />
-      </div>      
+      <Paper className={layout.wrap}>
+        <div className={layout.col}></div>
+        <div className={layout.col}><Center app={this} /></div>
+        <div className={layout.col}></div>
+      </Paper>
     )
   }
 }
+
+
+
 
 export default hot(App)
