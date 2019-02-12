@@ -1,16 +1,23 @@
 .center {  
   position: relative;
-  .ctn {
+  .wrap {
     margin-top: 12px;
     height: 710px;
-    overflow: hidden;
-    .item {
-      width: 90%;
-      margin: 14px auto;
-      height: 30px;
-      text-align: center;
-      line-height: 30px;
-      transition: all 1s;
+    box-sizing: border-box;
+    overflow: hidden; 
+    .ctn {         
+      transition: all ease-in-out 5000ms;
+      padding-top: 14px;
+      .item {
+        width: 90%;
+        margin: 14px auto;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        &:nth-child(1) {
+          margin-top: 0
+        }
+      }
     }
   }
   .chosen {
