@@ -1,9 +1,9 @@
 import React from 'react'
 import {hot} from 'react-hot-loader/root'
-import layout from './main.less'
-import Paper from '@material-ui/core/Paper'
-import Center from './cmp/center/Center'
+import Lottery from './pages/lottery/Lottery'
+import './main.less'
 
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
 
 class App extends React.Component {
   bingo() {
@@ -11,11 +11,11 @@ class App extends React.Component {
   }
   render() {
     return (
-      <Paper className={layout.wrap}>
-        <div className={layout.col}></div>
-        <div className={layout.col}><Center app={this} /></div>
-        <div className={layout.col}></div>
-      </Paper>
+      <BrowserRouter>
+        <div>
+          <Route path="/a" component={Lottery} />
+        </div>
+      </BrowserRouter>      
     )
   }
 }

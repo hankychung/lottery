@@ -9,7 +9,8 @@ let config = {
     contentBase: path.resolve(__dirname, '../dist'),
     host: 'localhost',
     port: '8080',
-    hot: true
+    hot: true,
+    historyApiFallback: true
   }  
 }
 
