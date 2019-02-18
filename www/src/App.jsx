@@ -13,7 +13,8 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <Route path="/a" component={Lottery} />
+          <Route path="/lottery/a" component={Lottery} />
+          <Link to="/a">aaa</Link>
         </div>
       </BrowserRouter>      
     )
